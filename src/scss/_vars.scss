@@ -1,0 +1,20 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Inter", sans-serif;
+  --second-family: 'Raleway', sans-serif;
+  --third-family: "Cormorant Upright", sans-serif;
+  --content-width: 1440px;
+  --container-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --black: #000;
+  --green-light: #545b2f;
+  --orange: #c06341;
+  --bg-white: #f2f1ef;
+  --green-dark: #1e340c;
+  // font weight
+}

@@ -1,0 +1,329 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+
+}
+
+.page__body {
+  margin: 0;
+  min-width: 370px;
+  min-height: 100%;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-color: #F2F1EF;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+.container-fluid {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.hidden-sm {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.title__section {
+  font-family: var(--third-family);
+  font-size: clamp(24px, 3vw ,36px);
+  font-weight: 600;
+  color: var(--green-dark);
+  line-height: 120%;
+  margin: 0;
+
+  span {
+      color: var(--white);
+      padding: 14px 31px;
+      background-color: var(--green-light);
+      box-shadow: -1px 1px 0 0 rgba(84, 91, 47, 0.15);
+      border: 2px solid var(--zelenyy-elementy);
+      border-radius: 0 50px 0px 50px;
+      @media(max-width: 992px) {
+        display: block;
+        max-width: fit-content;
+      }
+  }
+}
+
+.btn {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--orange);
+  padding: 40px;
+  border :none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color .3s ease;
+  &:after {
+    content: '';
+    width: 28px;
+    height: 16px;
+    background: url('../img/icons/arrow-btn.svg') center / cover no-repeat;
+  }
+  @media(any-hover: hover) {
+    &:hover {
+      background-color: var(--green-dark);
+    }
+  }
+}
+
+.btn--whatsapp {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: var(--white);
+  padding: 16px 48px;
+  background: var(--green-dark);
+  border-radius: 28px;
+  transition: background-color .3s ease;
+  @media(any-hover: hover) {
+    &:hover {
+      background-color: var(--orange);
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-reversed {
+  flex-direction: row-reverse;
+}
+
+.slide__navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  &-btn {
+    cursor: pointer;
+    svg {
+      pointer-events: none;
+    }
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.5 !important;
+}
+
+.input {
+  border-radius: 10px;
+  padding: 16px 48px;
+  background: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--green-light);
+  border: none;
+  outline: none;
+  transition: .3s ease;
+}
+
+.input:focus {
+  outline: 1px solid rgb(49, 255, 49);
+}
+
+.about-academy__page {
+  margin-top: 60px;
+}
+
+.instagram--link {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 28px;
+  padding: 16px 48px;
+  background-color: var(--orange);
+  transition: background-color .3s ease;
+  @media(any-hover: hover) {
+    &:hover {
+      background-color: var(--green-dark);
+    }
+  }
+}
+
+.default-btn {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--green-dark);
+  border-radius: 28px;
+  padding: 16px 48px;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.back-btn {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--green-dark);
+  border: 1px solid var(--green-dark);
+  border-radius: 28px;
+  padding: 16px 48px;
+  margin-top: 20px;
+  display: inline-flex;
+  gap: 10px;
+  &:before {
+    content: '';
+    width: 30px;
+    height: 15px;
+    transition: .3s ease;
+    background: url('../img/svg/arrow-link-dark.svg') no-repeat;
+  }
+  @media(any-hover: hover) {
+    &:hover {
+      &:before {
+        transform: translateX(-3px);
+      }
+    }
+  }
+}
+
+.custom-input-container {
+  display: flex;
+  align-items: center;
+}
+.ui-widget.ui-widget-content {
+  width: 100%;
+}
+.custom-input-container input {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--orange);
+  border: none;
+  color: var(--white);
+}
+.ui-slider-handle {
+  background: url('../img/svg/input-circle.svg') center / cover no-repeat !important;
+  width: 30px !important;
+  height: 30px !important;
+  border: none !important;
+  top: -13px !important;
+}
+.ui-slider {
+  height: 2px !important;
+}
+.ui-slider-range-min {
+  background-color: var(--green-dark) !important;
+  height: 2px !important;
+}
